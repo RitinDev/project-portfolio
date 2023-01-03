@@ -1,16 +1,18 @@
 import { useState } from 'react';
 import { ShareAltOutlined, RightOutlined, GithubOutlined } from '@ant-design/icons';
-import { Avatar, Card } from 'antd';
+import { Card } from 'antd';
 
 const { Meta } = Card;
 
 type ProjectCardProps = {
     projectName: string;
     projectDescription: string;
+    projectContributors: contributorTypes;
     projectImage: string;
     projectLink: string;
     projectGithub: string;
 };
+type contributorTypes = 'Individual' | 'Team';
 
 const ProjectCard = (props: ProjectCardProps) => {
     const [shareButtonClicked, setShareButtonClicked] = useState(false);
@@ -25,6 +27,8 @@ const ProjectCard = (props: ProjectCardProps) => {
                             maxHeight: '225px',
                             objectFit: 'cover',
                             objectPosition: 'top',
+                            position: 'relative',
+                            top: '5px'
                         }
                     }
                     alt={props.projectName}
@@ -49,7 +53,13 @@ const ProjectCard = (props: ProjectCardProps) => {
         >
             <Meta
                 title={props.projectName}
-                description={props.projectDescription}
+                description={
+                    <div style={{'marginTop': '-2.5px'}}>
+                        <span style={{ 'fontWeight': 'bold' }}>{`${props.projectContributors} Project`}</span>
+                        <br />
+                        {props.projectDescription}
+                    </div>
+                }
             />
         </Card>
     );
