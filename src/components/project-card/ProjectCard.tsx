@@ -19,7 +19,12 @@ const ProjectCard = (props: ProjectCardProps) => {
 
     return (
         <Card
-            style={{ width: 300 }}
+            style={{ 
+                width: 300,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between', 
+            }}
             cover={
                 <img
                     style={
