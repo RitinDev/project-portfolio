@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     padding: 0;
+    margin: max(1rem, 2vw) 0;
 }
 
 .navbar__links a {
