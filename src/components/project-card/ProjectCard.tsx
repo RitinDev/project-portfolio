@@ -23,17 +23,19 @@ const ProjectCard = (props: ProjectCardProps) => {
                 width: 300,
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'space-between', 
+                justifyContent: 'space-between',
             }}
             cover={
                 <img
                     style={
                         {
-                            maxHeight: '225px',
+                            height: '225px',
                             objectFit: 'cover',
                             objectPosition: 'top',
                             position: 'relative',
-                            top: '5px'
+                            top: '5px',
+                            width: '95%',
+                            margin: 'auto',
                         }
                     }
                     alt={props.projectName}
