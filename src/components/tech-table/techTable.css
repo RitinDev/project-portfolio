@@ -30,3 +30,20 @@
     transform: rotateY(360deg);
   }
 }
+
+/* Fade tech table in but only after 0.25s */
+.tech-table {
+    animation: slow-fade 1s ease-in-out;
+}
+
+@keyframes slow-fade {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,3 +1,21 @@
 .home-heading {
     font-size: 2.5rem;
 }
+
+/* Fade home heading in */
+.home-heading {
+    animation: fade-in 0.5s ease-in-out;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.tools-tech {
+    animation: slow-fade 1s ease-in-out;
+}
