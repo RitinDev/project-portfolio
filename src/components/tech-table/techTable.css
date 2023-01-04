@@ -10,3 +10,17 @@
 .express-logo {
   filter: invert(1);
 }
+
+.tech-table img:hover {
+  animation: flip 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
