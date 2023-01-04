@@ -1,6 +1,6 @@
 import './techTable.css'
 
-import viteLogo from '../../../public/vite.svg';
+import viteLogo from '../../assets/vite.svg'
 import antDesignLogo from '../../assets/ant-design-logo.svg'
 
 const TechTable = () => {
