@@ -1,7 +1,7 @@
 .projects__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1.2rem;
+  gap: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {

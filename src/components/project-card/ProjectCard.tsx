@@ -43,14 +43,18 @@ const ProjectCard = (props: ProjectCardProps) => {
                 />
             }
             actions={[
-                // Hpw dp I only show the github icon if the project has a github link?
                 <GithubOutlined key="github"
-                style={{display: props.projectGithub ? 'inline-block' : 'none'}} 
-                onClick={() => window.open(props.projectGithub, '_blank')} />,
+                style={{
+                    color: props.projectGithub ? '' : 'lightgray',
+                    // Note that the default color is '' instead of 'black' to preserve default hover color
+                    cursor: props.projectGithub ? 'pointer' : 'default',
+                }} 
+                onClick={() => 
+                    props.projectGithub && window.open(props.projectGithub, '_blank') // Ensure that the link exists before opening it
+                } />,
                 <RightOutlined key="go-to-page" onClick={() => window.open(props.projectLink, '_blank')} />,
                 <ShareAltOutlined key="share" style={{
                     color: shareButtonClicked ? 'lightseagreen' : '',
-                    // Note that the default color is '' instead of 'black' to preserve default hover color
                 }} onClick={() => {
                     navigator.clipboard.writeText(props.projectLink);
                     setShareButtonClicked(true);
