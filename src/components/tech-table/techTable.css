@@ -5,7 +5,13 @@
     justify-content: space-around;
     align-items: center;
     align-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .tech-table table {
+    font-size: 0.85rem;
   }
+}
 
 .express-logo {
   filter: invert(1);
