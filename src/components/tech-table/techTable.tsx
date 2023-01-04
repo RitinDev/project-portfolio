@@ -1,5 +1,8 @@
 import './techTable.css'
 
+import viteLogo from '../../../public/vite.svg';
+import antDesignLogo from '../../assets/ant-design-logo.svg'
+
 const TechTable = () => {
     return (
         <div className="tech-table">
@@ -63,6 +66,15 @@ const TechTable = () => {
                 <tr>
                     <td align="center" height="108" width="108">
                         <img
+                            src={antDesignLogo}
+                            width="48"
+                            height="48"
+                            alt="Ant Design"
+                        />
+                        <br /><strong>Ant Design</strong>
+                    </td>
+                    <td align="center" height="108" width="108">
+                        <img
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
                             width="48"
                             height="48"
@@ -106,6 +118,8 @@ const TechTable = () => {
                         />
                         <br /><strong>Git</strong>
                     </td>
+                </tr>
+                <tr>
                     <td align="center" height="108" width="108">
                         <img
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"
@@ -115,8 +129,15 @@ const TechTable = () => {
                         />
                         <br /><strong>Npm</strong>
                     </td>
-                </tr>
-                <tr>
+                    <td align="center" height="108" width="108">
+                        <img
+                            src={viteLogo}
+                            width="48"
+                            height="48"
+                            alt="Vite"
+                        />
+                        <br /><strong>Vite</strong>
+                    </td>
                     <td align="center" height="108" width="108">
                         <img
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
@@ -151,7 +172,7 @@ const TechTable = () => {
                             height="48"
                             alt="C++"
                         />
-                        <br /><strong>C++</strong>
+                        <br /><strong>C / C++</strong>
                     </td>
                 </tr>
             </table>
