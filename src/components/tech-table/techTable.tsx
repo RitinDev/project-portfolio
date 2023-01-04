@@ -84,6 +84,7 @@ const TechTable = () => {
                     </td>
                     <td align="center" height="108" width="108">
                         <img
+                            className='express-logo'
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
                             width="48"
                             height="48"

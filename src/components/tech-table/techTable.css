@@ -6,3 +6,7 @@
     align-items: center;
     align-content: center;
   }
+
+.express-logo {
+  filter: invert(1);
+}
