@@ -6,6 +6,16 @@
     margin-top: 2.5rem;
 }
 
+/* On mobile, make the contacts-grid a simple vertical flexbox */
+@media (max-width: 768px) {
+    .contacts-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 .contacts-grid-item {
     width: 275px;
     height: 275px;

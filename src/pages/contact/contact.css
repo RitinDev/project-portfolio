@@ -1,7 +1,3 @@
-.contact-heading {
-    margin: 0;
-}
-
 .contact {
     display: flex;
     flex-direction: column;
@@ -9,14 +5,16 @@
     justify-content: center;
 }
 
-.contact h2 {
-    font-weight: 300;
+.contact__contact-heading {
+    margin: 0;
 }
 
-.contact-links {
-    /* concise grid with two links in each column */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 1rem;
-    column-gap: 15rem;
+.contact h2 {
+    font-weight: 300;
+    margin-bottom: -0.5rem;
+}
+
+.contact__contacts-grid {
+    margin: 0;
+    padding: 0;
 }
