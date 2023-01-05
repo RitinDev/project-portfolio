@@ -1,0 +1,12 @@
+.contact-link {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-link a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    font-weight: 300;
+}
