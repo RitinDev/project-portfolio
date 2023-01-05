@@ -1,3 +1,4 @@
+// Note: UNUSED / DEPRECATED
 import './contactLink.css'
 
 type contactLinkProps = {
