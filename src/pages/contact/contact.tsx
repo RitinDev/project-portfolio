@@ -8,6 +8,8 @@ type ContactObj = {
     userName: string
 }
 
+import ContactsGrid from '../../components/contacts-grid/contactsGrid';
+
 const Contact = () => {
     const github: ContactObj = {
         icon: <GithubFilled />,
@@ -43,6 +45,7 @@ const Contact = () => {
                 <ContactLink icon={email.icon} link={email.link} userName={email.userName} />
                 <ContactLink icon={instagram.icon} link={instagram.link} userName={instagram.userName} />
             </div>
+            <ContactsGrid />
         </div>
     )
 }

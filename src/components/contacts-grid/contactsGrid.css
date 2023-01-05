@@ -1,0 +1,30 @@
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 13.5px;
+    margin-top: 2.5rem;
+}
+
+.contacts-grid-item {
+    width: 275px;
+    height: 275px;
+    border: 1px solid #ccc;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.contacts-grid-item:hover {
+    transform: scale(1.15);
+    z-index: 1;
+    transition: all 0.05s ease-in-out;
+}
+
+.contacts-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3);
+    pointer-events: none;
+}
