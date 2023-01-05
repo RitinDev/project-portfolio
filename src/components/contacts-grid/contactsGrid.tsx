@@ -14,7 +14,7 @@ const socialMediaLinks = {
 }
 
 const logoStyle: React.CSSProperties = {
-    fontSize: '2.5rem',
+    fontSize: '2.75rem',
     position: 'absolute',
     top: '30%',
     left: '50%',
@@ -23,7 +23,7 @@ const logoStyle: React.CSSProperties = {
     width: '100%',
 };
 const userNameStyle: React.CSSProperties = {
-    fontSize: '1.1rem',
+    fontSize: '1.25rem',
     position: 'absolute',
     top: '42.5%',
     left: '50%',
