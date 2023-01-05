@@ -11,7 +11,8 @@
 
 .contact h2 {
     font-weight: 300;
-    margin-bottom: -0.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: -1.25rem;
     /* Add animation */
     animation: move-in-left 0.25s ease-in-out;
 }
