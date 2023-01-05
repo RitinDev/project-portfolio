@@ -12,9 +12,12 @@
 .contact h2 {
     font-weight: 300;
     margin-bottom: -0.5rem;
+    /* Add animation */
+    animation: move-in-left 0.25s ease-in-out;
 }
 
 .contact__contacts-grid {
     margin: 0;
     padding: 0;
+    animation: slow-fade 0.75s ease-in-out;
 }
