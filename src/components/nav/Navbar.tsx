@@ -1,6 +1,6 @@
 import './Navbar.css';
 
-const BASE_URL: string = '/project-portfolio'
+const BASE_URL: string = '/project-portfolio/#'
 
 type pathList = {
     home: string
