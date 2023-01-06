@@ -6,20 +6,6 @@ import Home from './home/home'
 import Projects from './projects/projects'
 import Contact from './contact/contact'
 
-const BASE_URL: string = ''
-
-type pathList = {
-  home: string
-  projects: string
-  contact: string
-}
-
-const appPaths: pathList = {
-  home: `${BASE_URL}/`,
-  projects: `${BASE_URL}/projects`,
-  contact: `${BASE_URL}/contact`,
-}
-
 function App() {
   return (
     <div className="App">
@@ -31,7 +17,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
-          <Navbar baseURL={BASE_URL} appPaths={appPaths} />
+          <Navbar />
       </Router>
     </div>
   )

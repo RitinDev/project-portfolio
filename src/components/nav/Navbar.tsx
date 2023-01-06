@@ -1,26 +1,31 @@
 import './Navbar.css';
 
-type NavbarProps = {
-    baseURL: string;
-    appPaths: {
-        home: string;
-        projects: string;
-        contact: string;
-    };
-};
+const BASE_URL: string = '/project-portfolio/#'
 
-const Navbar = (props: NavbarProps) => {
+type pathList = {
+    home: string
+    projects: string
+    contact: string
+}
+
+const appPaths: pathList = {
+    home: `${BASE_URL}/`,
+    projects: `${BASE_URL}/projects`,
+    contact: `${BASE_URL}/contact`,
+}
+
+const Navbar = () => {
     return (
         <nav className="navbar">
             <ul className="navbar__links">
                 <li>
-                    <a href="/">Home</a>
+                    <a href={appPaths.home}>Home</a>
                 </li>
                 <li>
-                    <a href="/project-portfolio/#/projects">Projects</a>
+                    <a href={appPaths.projects}>Projects</a>
                 </li>
                 <li>
-                    <a href="/contact">Contact</a>
+                    <a href={appPaths.contact}>Contact</a>
                 </li>
             </ul>
         </nav>
