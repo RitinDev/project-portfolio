@@ -6,7 +6,7 @@ import Home from './home/home'
 import Projects from './projects/projects'
 import Contact from './contact/contact'
 
-const BASE_URL: string = '/#'
+const BASE_URL: string = ''
 
 type pathList = {
   home: string
