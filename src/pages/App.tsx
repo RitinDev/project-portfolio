@@ -1,12 +1,12 @@
 import './App.css'
 import Navbar from '../components/nav/Navbar'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Home from './home/home'
 import Projects from './projects/projects'
 import Contact from './contact/contact'
 
-const BASE_URL: string = '/project-portfolio'
+const BASE_URL: string = ''
 
 type pathList = {
   home: string
