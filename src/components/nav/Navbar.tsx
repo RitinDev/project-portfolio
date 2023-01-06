@@ -17,7 +17,7 @@ const Navbar = (props: NavbarProps) => {
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/projects">Projects</a>
+                    <a href="/project-portfolio/#/projects">Projects</a>
                 </li>
                 <li>
                     <a href="/contact">Contact</a>
