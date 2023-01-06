@@ -14,13 +14,13 @@ const Navbar = (props: NavbarProps) => {
         <nav className="navbar">
             <ul className="navbar__links">
                 <li>
-                    <a href={props.appPaths.home}>Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href={props.appPaths.projects}>Projects</a>
+                    <a href="/projects">Projects</a>
                 </li>
                 <li>
-                    <a href={props.appPaths.contact}>Contact</a>
+                    <a href="/contact">Contact</a>
                 </li>
             </ul>
         </nav>

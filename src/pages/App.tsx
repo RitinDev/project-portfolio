@@ -27,8 +27,8 @@ function App() {
         <div className="app-wrapper">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path={appPaths.projects} element={<Projects />} />
-            <Route path={appPaths.contact} element={<Contact />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
           <Navbar baseURL={BASE_URL} appPaths={appPaths} />
