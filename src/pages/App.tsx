@@ -26,7 +26,7 @@ function App() {
       <Router>
         <div className="app-wrapper">
           <Routes>
-            <Route path={appPaths.home} element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path={appPaths.projects} element={<Projects />} />
             <Route path={appPaths.contact} element={<Contact />} />
           </Routes>
