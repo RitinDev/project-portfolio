@@ -42,3 +42,12 @@
     bottom: 0.2rem;
     margin: 0 0.5rem;
 }
+
+@media (prefers-color-scheme: light) {
+    .navbar__links a {
+        color: #213547;
+    }
+    .navbar__links :not(:last-child) a::after {
+        background: #213547;
+    }
+}

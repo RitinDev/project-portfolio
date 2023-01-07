@@ -1,10 +1,10 @@
 .tech-table {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -13,8 +13,10 @@
   }
 }
 
-.express-logo {
-  filter: invert(1);
+@media (prefers-color-scheme: dark) {
+  .express-logo {
+    filter: invert(1);
+  }
 }
 
 .tech-table img:hover {
@@ -24,5 +26,5 @@
 
 /* Fade tech table in but only after 0.25s */
 .tech-table {
-    animation: slow-fade 1s ease-in-out;
+  animation: slow-fade 1s ease-in-out;
 }
