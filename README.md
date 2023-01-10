@@ -6,4 +6,4 @@
 
 A project portfolio built with React, Ant Design, TypeScript and Vite.
 
-[Deployed](https://ritindev.github.io/project-portfolio/) on GitHub Pages using GitHub Actions for CI.
+[Deployed](https://ritindev.github.io/project-portfolio/) on GitHub Pages using GitHub Actions for CD.
