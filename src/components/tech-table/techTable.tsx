@@ -7,6 +7,9 @@ const TechTable = () => {
     return (
         <div className="tech-table">
             <table>
+                <thead>
+                </thead>
+                <tbody>
                 <tr>
                     <td align="center" height="108" width="108">
                         <img
@@ -176,6 +179,7 @@ const TechTable = () => {
                         <br /><strong>C / C++</strong>
                     </td>
                 </tr>
+                </tbody>
             </table>
         </div>
     )
