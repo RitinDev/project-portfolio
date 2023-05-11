@@ -40,6 +40,10 @@ const ProjectCard = (props: ProjectCardProps) => {
                     }
                     alt={props.projectName}
                     src={props.projectImage}
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.cursor = 'pointer';
+                    }}
+                    onClick={() => window.open(props.projectLink, '_blank')}
                 />
             }
             actions={[
