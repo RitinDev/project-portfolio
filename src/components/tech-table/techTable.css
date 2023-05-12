@@ -19,9 +19,10 @@
   }
 }
 
-.tech-table img:hover {
-  animation: flip 1s;
-  animation-fill-mode: forwards;
+.tech-table img:not(.express-logo):hover {
+  /* animation: flip 1s; */
+  /* animation-fill-mode: forwards; */
+  filter: brightness(1.2);
 }
 
 /* Fade tech table in but only after 0.25s */

@@ -10,3 +10,13 @@
 .tools-tech {
     animation: slow-fade 1s ease-in-out;
 }
+
+.tools-emoji {
+    display: inline-block;
+    cursor: default;
+}
+
+.tools-emoji:hover {
+    animation: flip 1s;
+    animation-fill-mode: forwards;
+}
