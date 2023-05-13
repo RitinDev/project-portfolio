@@ -25,6 +25,19 @@
   filter: brightness(1.2);
 }
 
+@media (prefers-color-scheme: light) {
+  .tech-table img:not(.express-logo):hover {
+    filter: brightness(1);
+    transform: translateY(-7.5px);
+    transition: transform 0.1s;
+  }
+
+  .tech-table img:is(.express-logo):hover {
+    transform: translateY(-7.5px);
+    transition: transform 0.1s;
+  }
+}
+
 /* Fade tech table in but only after 0.25s */
 .tech-table {
   animation: slow-fade 1s ease-in-out;
