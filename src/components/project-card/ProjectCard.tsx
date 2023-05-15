@@ -24,6 +24,7 @@ const ProjectCard = (props: ProjectCardProps) => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
+                boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px',
             }}
             cover={
                 <img
