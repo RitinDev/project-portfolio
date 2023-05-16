@@ -34,7 +34,7 @@ const ProjectCard = (props: ProjectCardProps) => {
                             objectFit: 'cover',
                             objectPosition: 'top',
                             position: 'relative',
-                            top: '5px',
+                            top: '7.65px',
                             width: '95%',
                             margin: 'auto',
                         }
