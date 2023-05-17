@@ -26,6 +26,13 @@ const ProjectCard = (props: ProjectCardProps) => {
                 justifyContent: 'space-between',
                 boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px',
             }}
+            onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-5px) scale(1.01)';
+                e.currentTarget.style.transition = 'transform 0.15s ease-out';
+            }}
+            onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1)';
+            }}
             cover={
                 <img
                     style={
