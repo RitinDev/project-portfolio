@@ -9,7 +9,7 @@ import { GithubFilled, LinkedinFilled, MailOutlined, InstagramOutlined } from '@
 const socialMediaLinks = {
     github: 'https://github.com/RitinDev',
     linkedin: 'https://www.linkedin.com/in/ritin-malhotra/',
-    email: 'mailto:rm5486@nyu.edu',
+    email: '/project-portfolio/#/mail',
     instagram: 'https://www.instagram.com/ritinmalhotra/?hl=en'
 }
 
@@ -50,7 +50,7 @@ const ContactsGrid = () => {
                 <p style={userNameStyle}>Ritin Malhotra</p>
             </div>
             <div className="contacts-grid-item" onClick={() => {
-                window.open(socialMediaLinks.email, '_blank')
+                window.open(socialMediaLinks.email, '_self')
             }}>
                 <img src={emailContact} alt="email" />
                 <MailOutlined style={logoStyle} className='contact-logo' />
