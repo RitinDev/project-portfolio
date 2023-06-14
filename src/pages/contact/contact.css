@@ -20,5 +20,5 @@
 .contact__contacts-grid {
     margin: 0;
     padding: 0;
-    animation: slow-fade 0.75s ease-in-out;
+    animation: show-from-top 0.35s ease-in-out;
 }

@@ -1,0 +1,60 @@
+.contacts-lister {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2.35rem;
+}
+
+@media (max-width: 768px) {
+    .contacts-lister {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.contacts-lister-item {
+    width: 275px;
+    height: 275px;
+    border: 1px solid #ccc;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.contacts-lister-item.mail {
+    width: 290px;
+    height: 290px;
+    cursor: alias;
+}
+
+.contacts-lister-item:hover {
+    filter: brightness(1.2);
+    transition: all 0.05s ease-in-out;
+}
+
+.contacts-lister-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3);
+    pointer-events: none;
+}
+
+.secondary-contacts-heading {
+    font-weight: 400;
+}
+
+.secondary-contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.github, .linkedin {
+    width: 250px;
+    height: 250px;
+}
