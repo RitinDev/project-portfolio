@@ -11,6 +11,19 @@
   .tech-table table {
     font-size: 0.85rem;
   }
+
+  .tech-table tbody {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .tech-table tr {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 20%;
+  }
+
 }
 
 @media (prefers-color-scheme: dark) {

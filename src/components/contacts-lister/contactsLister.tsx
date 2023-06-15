@@ -3,7 +3,7 @@ import githubContact from '../../assets/images/contact-page/github-backdrop.jpeg
 import linkedinContact from '../../assets/images/contact-page/linkedin-backdrop.png'
 import emailContact from '../../assets/images/contact-page/gmail-backdrop.jpeg'
 
-import { GithubFilled, LinkedinFilled, MailOutlined, InstagramOutlined } from '@ant-design/icons';
+import { GithubFilled, LinkedinFilled, MailOutlined } from '@ant-design/icons';
 
 const socialMediaLinks = {
     github: 'https://github.com/RitinDev',

@@ -1,5 +1,4 @@
 import './contact.css'
-import { GithubFilled, LinkedinFilled, MailOutlined, InstagramOutlined } from '@ant-design/icons';
 import ContactsGrid from '../../components/contacts-lister/contactsLister';
 
 const Contact = () => {

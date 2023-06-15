@@ -22,3 +22,9 @@
     padding: 0;
     animation: show-from-top 0.35s ease-in-out;
 }
+
+@media (max-width: 768px) {
+    .contact h2 {
+        font-size: 1.35rem;
+    }
+}
