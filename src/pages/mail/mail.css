@@ -97,3 +97,30 @@ textarea {
     justify-content: center;
     align-items: center;
 }
+
+@media (prefers-color-scheme: light) {
+    .mail-form-item {
+        color: #2c2c2c;
+    }
+
+    input[type="text"],
+    textarea {
+        background: #fff;
+        border: 1px solid #2c2c2c;
+    }
+
+    .mail-form-submit {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .mail-form-cancel {
+        background-color: #2e2929;
+        color: #fff;
+    }
+
+    .mail-form-submit:disabled {
+        background-color: #9a9898;
+        color: #2c2c2c;
+    }
+}
