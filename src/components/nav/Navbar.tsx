@@ -1,32 +1,34 @@
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
-const BASE_URL: string = '/project-portfolio/#'
+type PathList = Record<string, string>;
 
-type pathList = {
-    home: string
-    projects: string
-    contact: string
-}
-
-const appPaths: pathList = {
-    home: `${BASE_URL}/`,
-    projects: `${BASE_URL}/projects`,
-    contact: `${BASE_URL}/contact`,
-}
+const appPaths: PathList = {
+    Home: '/',
+    Projects: '/projects',
+    Contact: '/contact',
+};
 
 const Navbar = () => {
+    const location = useLocation();
+
     return (
         <nav className="navbar">
             <ul className="navbar__links">
-                <li>
-                    <a href={appPaths.home}>Home</a>
-                </li>
-                <li>
-                    <a href={appPaths.projects}>Projects</a>
-                </li>
-                <li>
-                    <a href={appPaths.contact}>Contact</a>
-                </li>
+                {Object.entries(appPaths).map(([name, path]) => (
+                    <li key={name}>
+                        <Link
+                            to={path}
+                            className={
+                                location.pathname === path
+                                    ? 'navbar__link navbar__link--active'
+                                    : 'navbar__link'
+                            }
+                        >
+                            {name}
+                        </Link>
+                    </li>
+                ))}
             </ul>
         </nav>
     );
