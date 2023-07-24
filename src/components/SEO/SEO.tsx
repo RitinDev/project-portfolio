@@ -38,6 +38,7 @@ const SEO: React.FC<SEOProps> = ({
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content={image} />
             {keywords.length > 0 && <meta name="keywords" content={keywords.join(',')} />}
+            <meta name="google-site-verification" content="h3F27cGPBUBpmineSo6lVBy0lhABxmJ0Q_FMHoMOzLc" />
         </Helmet>
     );
 }
