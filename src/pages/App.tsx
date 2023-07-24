@@ -1,6 +1,6 @@
 import './App.css'
 import Navbar from '../components/nav/Navbar'
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async';
 
 import Home from './home/home'
@@ -13,7 +13,9 @@ function App() {
   return (
     <HelmetProvider>
       <div className="App">
-        <Router>
+        <Router
+          basename={import.meta.env.DEV ? '/' : '/project-portfolio/'}
+        >
           <SEO />
           <div className="app-wrapper">
             <Routes>
