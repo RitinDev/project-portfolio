@@ -27,25 +27,25 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .express-logo {
+  .switch-colors {
     filter: invert(1);
   }
 }
 
-.tech-table img:not(.express-logo):hover {
+.tech-table img:not(.switch-colors):hover {
   /* animation: flip 1s; */
   /* animation-fill-mode: forwards; */
   filter: brightness(1.2);
 }
 
 @media (prefers-color-scheme: light) {
-  .tech-table img:not(.express-logo):hover {
+  .tech-table img:not(.switch-colors):hover {
     filter: brightness(1);
     transform: translateY(-7.5px);
     transition: transform 0.1s;
   }
 
-  .tech-table img:is(.express-logo):hover {
+  .tech-table img:is(.switch-colors):hover {
     transform: translateY(-7.5px);
     transition: transform 0.1s;
   }

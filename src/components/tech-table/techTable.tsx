@@ -15,6 +15,7 @@ const TechTable = () => {
                         <th scope="col"></th>
                         <th scope="col"></th>
                         <th scope="col"></th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -73,8 +74,6 @@ const TechTable = () => {
                             />
                             <br /><strong>Material UI</strong>
                         </td>
-                    </tr>
-                    <tr>
                         <td align="center" height="108" width="108">
                             <img
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
@@ -84,6 +83,8 @@ const TechTable = () => {
                             />
                             <br /><strong>Bootstrap</strong>
                         </td>
+                    </tr>
+                    <tr>
                         <td align="center" height="108" width="108">
                             <img
                                 src={antDesignLogo}
@@ -104,7 +105,7 @@ const TechTable = () => {
                         </td>
                         <td align="center" height="108" width="108">
                             <img
-                                className='express-logo'
+                                className='express-logo switch-colors'
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
                                 width="48"
                                 height="48"
@@ -129,6 +130,24 @@ const TechTable = () => {
                                 alt="MySQL"
                             />
                             <br /><strong>MySQL</strong>
+                        </td>
+                        <td align="center" height="108" width="108">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                width="48"
+                                height="48"
+                                alt="Python"
+                            />
+                            <br /><strong>Python</strong>
+                        </td>
+                        <td align="center" height="108" width="108">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
+                                width="48"
+                                height="48"
+                                alt="R"
+                            />
+                            <br /><strong>R</strong>
                         </td>
                     </tr>
                     <tr>
@@ -170,21 +189,31 @@ const TechTable = () => {
                         </td>
                         <td align="center" height="108" width="108">
                             <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                                width="48"
-                                height="48"
-                                alt="Python"
-                            />
-                            <br /><strong>Python</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
                                 width="48"
                                 height="48"
                                 alt="C++"
                             />
                             <br /><strong>C / C++</strong>
+                        </td>
+                        <td align="center" height="108" width="108">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                width="48"
+                                height="48"
+                                alt="Java"
+                            />
+                            <br /><strong>Java</strong>
+                        </td>
+                        <td align="center" height="108" width="108">
+                            <img
+                                className='rust-logo switch-colors'
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg"
+                                width="48"
+                                height="48"
+                                alt="Rust"
+                            />
+                            <br /><strong>Rust</strong>
                         </td>
                     </tr>
                 </tbody>
