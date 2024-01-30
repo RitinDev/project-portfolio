@@ -8,10 +8,11 @@ const appPaths: PathList = {
     Home: '/',
     Projects: '/projects',
     Contact: '/contact',
+    Resume: '/ritin-malhotra-resume.pdf',
 };
 
 // External links
-const resumeUrl = '/ritin-malhotra-resume.pdf';
+const resumeUrl = '/project-portfolio/ritin-malhotra-resume.pdf';
 const githubProfileUrl = 'https://github.com/RitinDev';
 
 const Navbar = () => {
