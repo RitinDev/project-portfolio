@@ -8,7 +8,6 @@ const appPaths: PathList = {
     Home: '/',
     Projects: '/projects',
     Contact: '/contact',
-    Resume: '/ritin-malhotra-resume.pdf',
 };
 
 // External links
