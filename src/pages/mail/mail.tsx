@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
+import MailForm from '../../components/mail-form/MailForm';
 import './mail.css';
 
 type EmailJSData = {
@@ -74,23 +75,17 @@ const Mail = () => {
     return (
         <div className="mail">
             <h1 className='mail-heading'>Get in Touch</h1>
-            <form className="mail-form" onSubmit={handleSubmit}>
-                {isLoading && <div className='confirmation-message'>Loading...</div>}
-                {submissionStatus === 'success' && <div className='confirmation-message'>Email sent successfully!</div>}
-                {submissionStatus === 'failure' && <div className='confirmation-message'>There was an error sending the email.</div>}
-                <div className="mail-form-item">
-                    <label htmlFor="email">Email*</label>
-                    <input type="text" id="email" name="email" placeholder="Your email" onChange={handleEmail} />
-                </div>
-                <div className="mail-form-item">
-                    <label htmlFor="subject">Message*</label>
-                    <textarea id="subject" name="subject" placeholder="Write something" onChange={handleMessage}></textarea>
-                </div>
-                <div className="mail-form-buttons">
-                    <button className='mail-form-submit' type="submit" disabled={checkFields}>Send Mail</button>
-                    <button className='mail-form-cancel' type="button" onClick={handleCancel}>Cancel</button>
-                </div>
-            </form>
+            <MailForm
+                email={email}
+                message={message}
+                checkFields={checkFields}
+                handleEmail={handleEmail}
+                handleMessage={handleMessage}
+                handleSubmit={handleSubmit}
+                handleCancel={handleCancel}
+                isLoading={isLoading}
+                submissionStatus={submissionStatus}
+            />
         </div>
     )
 }
