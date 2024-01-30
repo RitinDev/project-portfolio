@@ -8,7 +8,7 @@ import { GithubFilled, LinkedinFilled, MailOutlined } from '@ant-design/icons';
 const socialMediaLinks = {
     github: 'https://github.com/RitinDev',
     linkedin: 'https://www.linkedin.com/in/ritin-malhotra/',
-    email: '/mail',
+    email: '/project-portfolio/mail',
     // instagram: 'https://www.instagram.com/ritinmalhotra/?hl=en'
 }
 
