@@ -11,6 +11,7 @@ const appPaths: PathList = {
 };
 
 // External links
+const resumeUrl = '/ritin-malhotra-resume.pdf';
 const githubProfileUrl = 'https://github.com/RitinDev';
 
 const Navbar = () => {
@@ -36,6 +37,16 @@ const Navbar = () => {
                             </Link>
                         </li>
                     ))}
+                    <li>
+                        <a
+                            href={resumeUrl}
+                            className="navbar__link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Resume
+                        </a>
+                    </li>
                     <li>
                         <a
                             href={githubProfileUrl}
