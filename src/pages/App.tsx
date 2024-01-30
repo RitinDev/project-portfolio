@@ -16,6 +16,7 @@ function App() {
         <Router
           basename={import.meta.env.DEV ? '/' : '/project-portfolio/'}
         >
+          <Navbar />
           <SEO />
           <div className="app-wrapper">
             <Routes>
@@ -25,7 +26,6 @@ function App() {
               <Route path="/mail" element={<Mail />} />
             </Routes>
           </div>
-          <Navbar />
         </Router>
       </div>
     </HelmetProvider>
