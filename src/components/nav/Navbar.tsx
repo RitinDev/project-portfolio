@@ -1,13 +1,17 @@
 import { Link, useLocation } from 'react-router-dom';
+import { GithubOutlined } from '@ant-design/icons';
 import './Navbar.css';
 
+// Internal navigation paths
 type PathList = Record<string, string>;
-
 const appPaths: PathList = {
     Home: '/',
     Projects: '/projects',
     Contact: '/contact',
 };
+
+// External links
+const githubProfileUrl = 'https://github.com/RitinDev';
 
 const Navbar = () => {
     const location = useLocation();
@@ -17,6 +21,7 @@ const Navbar = () => {
             <h1 className="navbar__heading">Ritin Malhotra</h1>
             <nav className="navbar">
                 <ul className="navbar__links">
+                    {/* Display internal links */}
                     {Object.entries(appPaths).map(([name, path]) => (
                         <li key={name}>
                             <Link
@@ -31,6 +36,16 @@ const Navbar = () => {
                             </Link>
                         </li>
                     ))}
+                    <li>
+                        <a
+                            href={githubProfileUrl}
+                            className="navbar__link github__logo"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <GithubOutlined />
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>

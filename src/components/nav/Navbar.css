@@ -37,6 +37,10 @@
     transition: all 0.3s ease;
 }
 
+.github__logo {
+    font-size: 1.75rem !important;
+}
+
 .navbar__links a:hover {
     color: #646cff;
 }
