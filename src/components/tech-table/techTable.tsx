@@ -1,9 +1,41 @@
 import './techTable.css'
+import { useEffect } from 'react'
 
 import viteLogo from '../../assets/vite.svg'
 import antDesignLogo from '../../assets/ant-design-logo.svg'
 
 const TechTable = () => {
+    // Apply levitating animation to all images within the tech table
+    useEffect(() => {
+        const images = Array.from(document.querySelectorAll<HTMLImageElement>('.tech-table img'));
+
+        const handleMouseEnter = (event: MouseEvent) => {
+            const target = event.target as HTMLImageElement;
+            target.classList.add('hover-animate');
+        };
+
+        const handleMouseLeave = (event: MouseEvent) => {
+            const target = event.target as HTMLImageElement;
+            target.addEventListener('animationiteration', () => {
+                target.classList.remove('hover-animate');
+            }, { once: true });
+        };
+
+        // Attach event listeners
+        images.forEach(img => {
+            img.addEventListener('mouseenter', handleMouseEnter);
+            img.addEventListener('mouseleave', handleMouseLeave);
+        });
+
+        // Cleanup function to remove event listeners
+        return () => {
+            images.forEach(img => {
+                img.removeEventListener('mouseenter', handleMouseEnter);
+                img.removeEventListener('mouseleave', handleMouseLeave);
+            });
+        };
+    }, []);
+
     return (
         <div className="tech-table">
             <table>

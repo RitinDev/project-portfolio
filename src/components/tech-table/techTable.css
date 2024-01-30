@@ -26,32 +26,46 @@
 
 }
 
-@media (prefers-color-scheme: dark) {
-  .switch-colors {
-    filter: invert(1);
+/* Fade tech table in but only after 0.25s */
+.tech-table {
+  animation: slow-fade 1s ease-in-out;
+}
+
+/* On hover, put a levitation effect on each logo */
+.tech-table img.hover-animate {
+  animation: float 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+  animation-fill-mode: both;
+}
+
+/* Define keyframes for the floating animation */
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
   }
 }
 
-.tech-table img:not(.switch-colors):hover {
-  /* animation: flip 1s; */
-  /* animation-fill-mode: forwards; */
-  filter: brightness(1.2);
+@media (prefers-color-scheme: dark) {
+  .tech-table img:is(.switch-colors) {
+    filter: invert(1);
+  }
+
+  .tech-table img:not(.switch-colors):hover {
+    filter: brightness(1.2);
+  }
+
+  .tech-table img {
+    filter: drop-shadow(3px 9px 4px rgba(0, 0, 0, 0.3));
+  }
 }
 
 @media (prefers-color-scheme: light) {
   .tech-table img:not(.switch-colors):hover {
     filter: brightness(1);
-    transform: translateY(-7.5px);
-    transition: transform 0.1s;
   }
-
-  .tech-table img:is(.switch-colors):hover {
-    transform: translateY(-7.5px);
-    transition: transform 0.1s;
-  }
-}
-
-/* Fade tech table in but only after 0.25s */
-.tech-table {
-  animation: slow-fade 1s ease-in-out;
 }
