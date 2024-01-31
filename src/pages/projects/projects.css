@@ -1,3 +1,7 @@
+.heading {
+  margin: auto auto 0.75em auto;
+}
+
 .projects__container {
   display: flex;
   flex-wrap: wrap;

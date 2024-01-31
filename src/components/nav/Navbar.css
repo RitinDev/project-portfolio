@@ -29,10 +29,16 @@
     margin: max(1rem, 2vw) 0;
 }
 
+@media (max-width: 768px) {
+    .navbar__links {
+        gap: 1em;
+    }
+}
+
 .navbar__links a {
     color: #fff;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 500;
     transition: all 0.3s ease;
 }
@@ -57,23 +63,27 @@
     list-style: none;
 }
 
-.navbar__links :not(:last-child) a::after {
-    content: "";
-    display: inline-block;
-    width: 3px;
-    height: 3px;
-    background: #fff;
-    border-radius: 50%;
-    transition: width 0.3s;
-    position: relative;
-    bottom: 0.2rem;
-    margin: 0 0.5rem;
+/* Display the navbar with separating dots only on desktop devices */
+@media (min-width: 768px) {
+    .navbar__links :not(:last-child) a::after {
+        content: "";
+        display: inline-block;
+        width: 3px;
+        height: 3px;
+        background: #fff;
+        border-radius: 50%;
+        transition: width 0.3s;
+        position: relative;
+        bottom: 0.2rem;
+        margin: 0 0.5rem;
+    }
 }
 
 @media (prefers-color-scheme: light) {
     .navbar__links a {
         color: #213547;
     }
+
     .navbar__links :not(:last-child) a::after {
         background: #213547;
     }
