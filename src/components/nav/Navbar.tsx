@@ -11,7 +11,7 @@ const appPaths: PathList = {
 };
 
 // External links
-const resumeUrl = '/project-portfolio/ritin-malhotra-resume.pdf';
+const resumeUrl = `${import.meta.env.BASE_URL}ritin-malhotra-resume.pdf`;
 const githubProfileUrl = 'https://github.com/RitinDev';
 
 const Navbar = () => {
