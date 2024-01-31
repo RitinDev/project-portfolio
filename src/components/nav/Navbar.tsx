@@ -18,7 +18,7 @@ const Navbar = () => {
     const location = useLocation();
 
     return (
-        <div className="navbar__wrapper">
+        <header className="navbar__wrapper">
             <h1 className="navbar__heading">Ritin Malhotra</h1>
             <nav className="navbar">
                 <ul className="navbar__links">
@@ -59,7 +59,7 @@ const Navbar = () => {
                     </li>
                 </ul>
             </nav>
-        </div>
+        </header>
     );
 };
 
