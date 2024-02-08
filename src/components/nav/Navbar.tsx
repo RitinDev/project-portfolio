@@ -19,7 +19,12 @@ const Navbar = () => {
 
     return (
         <header className="navbar__wrapper">
-            <h1 className="navbar__heading">Ritin Malhotra</h1>
+            <a
+                href={`${import.meta.env.BASE_URL}`}
+                className='navbar__name__link'
+            >
+                <h1 className="navbar__heading">Ritin Malhotra</h1>
+            </a>
             <nav className="navbar">
                 <ul className="navbar__links">
                     {/* Display internal links */}
