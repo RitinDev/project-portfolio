@@ -7,12 +7,13 @@ const { Meta } = Card;
 type ProjectCardProps = {
     projectName: string;
     projectDescription: string;
-    projectContributors: contributorTypes;
+    projectContributors: ContributorTypes;
     projectImage: string;
     projectLink: string;
     projectGithub: string;
+    projectTechStack: string[] | undefined;
 };
-type contributorTypes = 'Individual' | 'Team';
+type ContributorTypes = 'Individual' | 'Team';
 
 const ProjectCard = (props: ProjectCardProps) => {
     const [shareButtonClicked, setShareButtonClicked] = useState(false);
@@ -44,8 +45,7 @@ const ProjectCard = (props: ProjectCardProps) => {
                             top: '7.65px',
                             width: '95%',
                             margin: 'auto',
-                        }
-                    }
+                    }}
                     alt={props.projectName}
                     src={props.projectImage}
                     onMouseEnter={(e) => {

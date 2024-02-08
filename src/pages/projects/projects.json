@@ -5,7 +5,8 @@
       "projectDescription": "An interactive drawing tool replete with fun features.",
       "projectImage": "odin-etch-a-sketch.png",
       "projectLink": "https://ritindev.github.io/odin-etch-a-sketch/",
-      "projectGithub": "https://github.com/RitinDev/odin-etch-a-sketch"
+      "projectGithub": "https://github.com/RitinDev/odin-etch-a-sketch",
+      "projectTechStack": ["HTML", "CSS", "JavaScript"]
     },
     {
       "projectName": "Busy?",
@@ -13,7 +14,8 @@
       "projectDescription": "A social calendar to share your schedules with your friends to find the best time to connect.",
       "projectImage": "busy-agile.png",
       "projectLink": "https://busy-8qzj4.ondigitalocean.app/login",
-      "projectGithub": "https://github.com/agiledev-students-fall2022/final-project-team-busy"
+      "projectGithub": "https://github.com/agiledev-students-fall2022/final-project-team-busy",
+      "projectTechStack": ["React", "Material UI", "Node.js", "Express", "MongoDB"]
     },
     {
       "projectName": "To-Do Together",
@@ -21,7 +23,8 @@
       "projectDescription": "A full stack web app for creating and sharing interactive to-do lists.",
       "projectImage": "to-do-together.png",
       "projectLink": "https://loc-final-project.onrender.com/",
-      "projectGithub": "https://github.com/RitinDev/loc-final-project"
+      "projectGithub": "https://github.com/RitinDev/loc-final-project",
+      "projectTechStack": ["HTML", "Bootstrap", "Node.js", "Express", "MongoDB"]
     },
     {
       "projectName": "Data Misinformation Project",
@@ -29,7 +32,8 @@
       "projectDescription": "A data analysis project comparing correct and misleading Covid-19 related tweets.",
       "projectImage": "data-misinformation.png",
       "projectLink": "https://ritindev.github.io/data-misinformation-project/",
-      "projectGithub": "https://github.com/RitinDev/data-misinformation-project"
+      "projectGithub": "https://github.com/RitinDev/data-misinformation-project",
+      "projectTechStack": ["HTML", "CSS", "Python", "Tableau"]
     },
     {
       "projectName": "Project Portfolio",
@@ -37,7 +41,8 @@
       "projectDescription": "A responsive portfolio to showcase my projects and skills.",
       "projectImage": "project-portfolio.png",
       "projectLink": "https://ritindev.github.io/project-portfolio/",
-      "projectGithub": "https://github.com/RitinDev/vite-project-portfolio"
+      "projectGithub": "https://github.com/RitinDev/vite-project-portfolio",
+      "projectTechStack": ["React", "TypeScript", "Ant Design", "Vite"]
     },
     {
       "projectName": "Crypto Expert",
@@ -45,7 +50,8 @@
       "projectDescription": "Learn more about your favorite cryptocurrency tokens and predict prices with our LSTM neural network.",
       "projectImage": "crypto-expert.png",
       "projectLink": "http://34.238.240.4:5000/",
-      "projectGithub": "https://github.com/KrisesMaskey/Crypto_Expert"
+      "projectGithub": "https://github.com/KrisesMaskey/Crypto_Expert",
+      "projectTechStack": ["HTML", "JavaScript", "Python", "Flask", "TensorFlow"]
     },
     {
       "projectName": "Emotech Internship Task",
@@ -53,7 +59,8 @@
       "projectDescription": "A responsive dashboard for Frontend Developer Role at Emotech.",
       "projectImage": "emotech-task.png",
       "projectLink": "https://emotech-frontend-task.netlify.app/",
-      "projectGithub": "https://github.com/RitinDev/emotech-frontend-task"
+      "projectGithub": "https://github.com/RitinDev/emotech-frontend-task",
+      "projectTechStack": ["React", "Ant Design"]
     }
   ]
   
