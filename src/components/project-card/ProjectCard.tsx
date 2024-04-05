@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { ShareAltOutlined, RightOutlined, GithubOutlined } from '@ant-design/icons';
-import { Card } from 'antd';
+import { ShareAltOutlined, RightOutlined, GithubOutlined, ExclamationCircleOutlined } from '@ant-design/icons';
+import { Card, Tooltip } from 'antd';
 
 const { Meta } = Card;
 
@@ -12,6 +12,7 @@ type ProjectCardProps = {
     projectLink: string;
     projectGithub: string;
     projectTechStack: string[] | undefined;
+    deployed: boolean;
 };
 type ContributorTypes = 'Individual' | 'Team';
 
@@ -20,7 +21,7 @@ const ProjectCard = (props: ProjectCardProps) => {
 
     return (
         <Card
-            style={{ 
+            style={{
                 width: 300,
                 display: 'flex',
                 flexDirection: 'column',
@@ -35,9 +36,9 @@ const ProjectCard = (props: ProjectCardProps) => {
                 e.currentTarget.style.transform = 'scale(1)';
             }}
             cover={
-                <img
-                    style={
-                        {
+                props.deployed ? (
+                    <img
+                        style={{
                             height: '225px',
                             objectFit: 'cover',
                             objectPosition: 'top',
@@ -45,26 +46,52 @@ const ProjectCard = (props: ProjectCardProps) => {
                             top: '7.65px',
                             width: '95%',
                             margin: 'auto',
-                    }}
-                    alt={props.projectName}
-                    src={props.projectImage}
-                    onMouseEnter={(e) => {
-                        e.currentTarget.style.cursor = 'pointer';
-                    }}
-                    onClick={() => window.open(props.projectLink, '_blank')}
-                />
+                        }}
+                        alt={props.projectName}
+                        src={props.projectImage}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.cursor = 'pointer';
+                        }}
+                        onClick={() => window.open(props.projectLink, '_blank')}
+                    />
+                ) : (
+                    <Tooltip title="Deployment currently unavailable" placement="bottom" mouseEnterDelay={0} mouseLeaveDelay={0}>
+                        <img
+                            style={{
+                                height: '225px',
+                                objectFit: 'cover',
+                                objectPosition: 'top',
+                                position: 'relative',
+                                top: '7.65px',
+                                width: '95%',
+                                margin: 'auto',
+                            }}
+                            alt={props.projectName}
+                            src={props.projectImage}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.cursor = 'not-allowed';
+                            }}
+                        />
+                    </Tooltip>
+                )
             }
             actions={[
                 <GithubOutlined key="github"
-                style={{
-                    color: props.projectGithub ? '' : 'lightgray',
-                    // Note that the default color is '' instead of 'black' to preserve default hover color
-                    cursor: props.projectGithub ? 'pointer' : 'default',
-                }} 
-                onClick={() => 
-                    props.projectGithub && window.open(props.projectGithub, '_blank') // Ensure that the link exists before opening it
-                } />,
-                <RightOutlined key="go-to-page" onClick={() => window.open(props.projectLink, '_blank')} />,
+                    style={{
+                        color: props.projectGithub ? '' : 'lightgray',
+                        // Note that the default color is '' instead of 'black' to preserve default hover color
+                        cursor: props.projectGithub ? 'pointer' : 'default',
+                    }}
+                    onClick={() =>
+                        props.projectGithub && window.open(props.projectGithub, '_blank') // Ensure that the link exists before opening it
+                    } />,
+                props.deployed ? (
+                    <RightOutlined key="go-to-page" onClick={() => window.open(props.projectLink, '_blank')} />
+                ) : (
+                    <Tooltip title="Deployment currently unavailable" placement="top" autoAdjustOverflow mouseEnterDelay={0}>
+                        <ExclamationCircleOutlined key="not-deployed" style={{ color: 'red', cursor: 'not-allowed' }} />
+                    </Tooltip>
+                ),
                 <ShareAltOutlined key="share" style={{
                     color: shareButtonClicked ? 'lightseagreen' : '',
                 }} onClick={() => {
@@ -80,7 +107,7 @@ const ProjectCard = (props: ProjectCardProps) => {
             <Meta
                 title={props.projectName}
                 description={
-                    <div style={{'marginTop': '-2.5px'}}>
+                    <div style={{ 'marginTop': '-2.5px' }}>
                         <span style={{ 'fontWeight': 'bold' }}>{`${props.projectContributors} Project`}</span>
                         <br />
                         {props.projectDescription}

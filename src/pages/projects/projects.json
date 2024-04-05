@@ -6,7 +6,8 @@
       "projectImage": "odin-etch-a-sketch.png",
       "projectLink": "https://ritindev.github.io/odin-etch-a-sketch/",
       "projectGithub": "https://github.com/RitinDev/odin-etch-a-sketch",
-      "projectTechStack": ["HTML", "CSS", "JavaScript"]
+      "projectTechStack": ["HTML", "CSS", "JavaScript"],
+      "deployed": true
     },
     {
       "projectName": "Busy?",
@@ -15,7 +16,8 @@
       "projectImage": "busy-agile.png",
       "projectLink": "https://busy-8qzj4.ondigitalocean.app/login",
       "projectGithub": "https://github.com/agiledev-students-fall2022/final-project-team-busy",
-      "projectTechStack": ["React", "Material UI", "Node.js", "Express", "MongoDB"]
+      "projectTechStack": ["React", "Material UI", "Node.js", "Express", "MongoDB"],
+      "deployed": false
     },
     {
       "projectName": "To-Do Together",
@@ -24,7 +26,8 @@
       "projectImage": "to-do-together.png",
       "projectLink": "https://loc-final-project.onrender.com/",
       "projectGithub": "https://github.com/RitinDev/loc-final-project",
-      "projectTechStack": ["HTML", "Bootstrap", "Node.js", "Express", "MongoDB"]
+      "projectTechStack": ["HTML", "Bootstrap", "Node.js", "Express", "MongoDB"],
+      "deployed": true
     },
     {
       "projectName": "Data Misinformation Project",
@@ -33,7 +36,8 @@
       "projectImage": "data-misinformation.png",
       "projectLink": "https://ritindev.github.io/data-misinformation-project/",
       "projectGithub": "https://github.com/RitinDev/data-misinformation-project",
-      "projectTechStack": ["HTML", "CSS", "Python", "Tableau"]
+      "projectTechStack": ["HTML", "CSS", "Python", "Tableau"],
+      "deployed": true
     },
     {
       "projectName": "Project Portfolio",
@@ -42,7 +46,8 @@
       "projectImage": "project-portfolio.png",
       "projectLink": "https://ritindev.github.io/project-portfolio/",
       "projectGithub": "https://github.com/RitinDev/vite-project-portfolio",
-      "projectTechStack": ["React", "TypeScript", "Ant Design", "Vite"]
+      "projectTechStack": ["React", "TypeScript", "Ant Design", "Vite"],
+      "deployed": true
     },
     {
       "projectName": "Crypto Expert",
@@ -51,7 +56,8 @@
       "projectImage": "crypto-expert.png",
       "projectLink": "http://34.238.240.4:5000/",
       "projectGithub": "https://github.com/KrisesMaskey/Crypto_Expert",
-      "projectTechStack": ["HTML", "JavaScript", "Python", "Flask", "TensorFlow"]
+      "projectTechStack": ["HTML", "JavaScript", "Python", "Flask", "TensorFlow"],
+      "deployed": false
     },
     {
       "projectName": "Emotech Internship Task",
@@ -60,7 +66,8 @@
       "projectImage": "emotech-task.png",
       "projectLink": "https://emotech-frontend-task.netlify.app/",
       "projectGithub": "https://github.com/RitinDev/emotech-frontend-task",
-      "projectTechStack": ["React", "Ant Design"]
+      "projectTechStack": ["React", "Ant Design"],
+      "deployed": true
     }
   ]
   
