@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ShareAltOutlined, RightOutlined, GithubOutlined, ExclamationCircleOutlined } from '@ant-design/icons';
 import { Card, Tooltip } from 'antd';
+import FigmaIcon from '../../components/figma-icon/FigmaIcon';
 
 const { Meta } = Card;
 
@@ -10,7 +11,8 @@ type ProjectCardProps = {
     projectContributors: ContributorTypes;
     projectImage: string;
     projectLink: string;
-    projectGithub: string;
+    projectGithub: string | undefined;
+    projectFigma: string | undefined;
     projectTechStack: string[] | undefined;
     deployed: boolean;
 };
@@ -76,15 +78,24 @@ const ProjectCard = (props: ProjectCardProps) => {
                 )
             }
             actions={[
-                <GithubOutlined key="github"
-                    style={{
-                        color: props.projectGithub ? '' : 'lightgray',
-                        // Note that the default color is '' instead of 'black' to preserve default hover color
-                        cursor: props.projectGithub ? 'pointer' : 'default',
-                    }}
-                    onClick={() =>
-                        props.projectGithub && window.open(props.projectGithub, '_blank') // Ensure that the link exists before opening it
-                    } />,
+                props.projectFigma ? (
+                    <FigmaIcon
+                        key="figma"
+                        onClick={() => window.open(props.projectFigma, '_blank')}
+                    />
+                ) : (
+                    <GithubOutlined
+                        key="github"
+                        style={{
+                            color: props.projectGithub ? '' : 'lightgray',
+                            // Note that the default color is '' instead of 'black' to preserve default hover color
+                            cursor: props.projectGithub ? 'pointer' : 'default',
+                        }}
+                        onClick={() =>
+                            props.projectGithub && window.open(props.projectGithub, '_blank') // Ensure that the link exists before opening it
+                        }
+                    />
+                ),
                 props.deployed ? (
                     <RightOutlined key="go-to-page" onClick={() => window.open(props.projectLink, '_blank')} />
                 ) : (
@@ -92,16 +103,20 @@ const ProjectCard = (props: ProjectCardProps) => {
                         <ExclamationCircleOutlined key="not-deployed" style={{ color: 'red', cursor: 'not-allowed' }} />
                     </Tooltip>
                 ),
-                <ShareAltOutlined key="share" style={{
-                    color: shareButtonClicked ? 'lightseagreen' : '',
-                }} onClick={() => {
-                    navigator.clipboard.writeText(props.projectLink);
-                    setShareButtonClicked(true);
-                    setTimeout(() => {
-                        setShareButtonClicked(false);
-                    }, 1000);
-                }
-                } />,
+                <ShareAltOutlined
+                    key="share"
+                    style={{
+                        color: shareButtonClicked ? 'lightseagreen' : '',
+                    }}
+                    onClick={() => {
+                        navigator.clipboard.writeText(props.projectLink);
+                        setShareButtonClicked(true);
+                        setTimeout(() => {
+                            setShareButtonClicked(false);
+                        }, 1000);
+                    }
+                    }
+                />,
             ]}
         >
             <Meta

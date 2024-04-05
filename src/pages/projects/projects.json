@@ -1,73 +1,140 @@
 [
-    {
-      "projectName": "Etch-a-Sketch",
-      "projectContributors": "Individual",
-      "projectDescription": "An interactive drawing tool replete with fun features.",
-      "projectImage": "odin-etch-a-sketch.png",
-      "projectLink": "https://ritindev.github.io/odin-etch-a-sketch/",
-      "projectGithub": "https://github.com/RitinDev/odin-etch-a-sketch",
-      "projectTechStack": ["HTML", "CSS", "JavaScript"],
-      "deployed": true
-    },
-    {
-      "projectName": "Busy?",
-      "projectContributors": "Team",
-      "projectDescription": "A social calendar to share your schedules with your friends to find the best time to connect.",
-      "projectImage": "busy-agile.png",
-      "projectLink": "https://busy-8qzj4.ondigitalocean.app/login",
-      "projectGithub": "https://github.com/agiledev-students-fall2022/final-project-team-busy",
-      "projectTechStack": ["React", "Material UI", "Node.js", "Express", "MongoDB"],
-      "deployed": false
-    },
-    {
-      "projectName": "To-Do Together",
-      "projectContributors": "Individual",
-      "projectDescription": "A full stack web app for creating and sharing interactive to-do lists.",
-      "projectImage": "to-do-together.png",
-      "projectLink": "https://loc-final-project.onrender.com/",
-      "projectGithub": "https://github.com/RitinDev/loc-final-project",
-      "projectTechStack": ["HTML", "Bootstrap", "Node.js", "Express", "MongoDB"],
-      "deployed": true
-    },
-    {
-      "projectName": "Data Misinformation Project",
-      "projectContributors": "Team",
-      "projectDescription": "A data analysis project comparing correct and misleading Covid-19 related tweets.",
-      "projectImage": "data-misinformation.png",
-      "projectLink": "https://ritindev.github.io/data-misinformation-project/",
-      "projectGithub": "https://github.com/RitinDev/data-misinformation-project",
-      "projectTechStack": ["HTML", "CSS", "Python", "Tableau"],
-      "deployed": true
-    },
-    {
-      "projectName": "Project Portfolio",
-      "projectContributors": "Individual",
-      "projectDescription": "A responsive portfolio to showcase my projects and skills.",
-      "projectImage": "project-portfolio.png",
-      "projectLink": "https://ritindev.github.io/project-portfolio/",
-      "projectGithub": "https://github.com/RitinDev/vite-project-portfolio",
-      "projectTechStack": ["React", "TypeScript", "Ant Design", "Vite"],
-      "deployed": true
-    },
-    {
-      "projectName": "Crypto Expert",
-      "projectContributors": "Team",
-      "projectDescription": "Learn more about your favorite cryptocurrency tokens and predict prices with our LSTM neural network.",
-      "projectImage": "crypto-expert.png",
-      "projectLink": "http://34.238.240.4:5000/",
-      "projectGithub": "https://github.com/KrisesMaskey/Crypto_Expert",
-      "projectTechStack": ["HTML", "JavaScript", "Python", "Flask", "TensorFlow"],
-      "deployed": false
-    },
-    {
-      "projectName": "Emotech Internship Task",
-      "projectContributors": "Individual",
-      "projectDescription": "A responsive dashboard for Frontend Developer Role at Emotech.",
-      "projectImage": "emotech-task.png",
-      "projectLink": "https://emotech-frontend-task.netlify.app/",
-      "projectGithub": "https://github.com/RitinDev/emotech-frontend-task",
-      "projectTechStack": ["React", "Ant Design"],
-      "deployed": true
-    }
-  ]
-  
+  {
+    "projectName": "Etch-a-Sketch",
+    "projectContributors": "Individual",
+    "projectDescription": "An interactive drawing tool replete with fun features.",
+    "projectImage": "odin-etch-a-sketch.png",
+    "projectLink": "https://ritindev.github.io/odin-etch-a-sketch/",
+    "projectGithub": "https://github.com/RitinDev/odin-etch-a-sketch",
+    "projectTechStack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "deployed": true,
+    "projectSubcategory": "Web Development"
+  },
+  {
+    "projectName": "Busy?",
+    "projectContributors": "Team",
+    "projectDescription": "A social calendar to share your schedules with your friends to find the best time to connect.",
+    "projectImage": "busy-agile.png",
+    "projectLink": "https://busy-8qzj4.ondigitalocean.app/login",
+    "projectGithub": "https://github.com/agiledev-students-fall2022/final-project-team-busy",
+    "projectTechStack": [
+      "React",
+      "Material UI",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "deployed": false,
+    "projectSubcategory": "Web Development"
+  },
+  {
+    "projectName": "To-Do Together",
+    "projectContributors": "Individual",
+    "projectDescription": "A full stack web app for creating and sharing interactive to-do lists.",
+    "projectImage": "to-do-together.png",
+    "projectLink": "https://loc-final-project.onrender.com/",
+    "projectGithub": "https://github.com/RitinDev/loc-final-project",
+    "projectTechStack": [
+      "HTML",
+      "Bootstrap",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "deployed": true,
+    "projectSubcategory": "Web Development"
+  },
+  {
+    "projectName": "Data Misinformation Project",
+    "projectContributors": "Team",
+    "projectDescription": "A data analysis project comparing correct and misleading Covid-19 related tweets.",
+    "projectImage": "data-misinformation.png",
+    "projectLink": "https://ritindev.github.io/data-misinformation-project/",
+    "projectGithub": "https://github.com/RitinDev/data-misinformation-project",
+    "projectTechStack": [
+      "HTML",
+      "CSS",
+      "Python",
+      "Tableau"
+    ],
+    "deployed": true,
+    "projectSubcategory": "Web Development"
+  },
+  {
+    "projectName": "Project Portfolio",
+    "projectContributors": "Individual",
+    "projectDescription": "A responsive portfolio to showcase my projects and skills.",
+    "projectImage": "project-portfolio.png",
+    "projectLink": "https://ritindev.github.io/project-portfolio/",
+    "projectGithub": "https://github.com/RitinDev/vite-project-portfolio",
+    "projectTechStack": [
+      "React",
+      "TypeScript",
+      "Ant Design",
+      "Vite"
+    ],
+    "deployed": true,
+    "projectSubcategory": "Web Development"
+  },
+  {
+    "projectName": "Crypto Expert",
+    "projectContributors": "Team",
+    "projectDescription": "Learn more about your favorite cryptocurrency tokens and predict prices with our LSTM neural network.",
+    "projectImage": "crypto-expert.png",
+    "projectLink": "http://34.238.240.4:5000/",
+    "projectGithub": "https://github.com/KrisesMaskey/Crypto_Expert",
+    "projectTechStack": [
+      "HTML",
+      "JavaScript",
+      "Python",
+      "Flask",
+      "TensorFlow"
+    ],
+    "deployed": false,
+    "projectSubcategory": "Web Development"
+  },
+  {
+    "projectName": "Emotech Internship Task",
+    "projectContributors": "Individual",
+    "projectDescription": "A responsive dashboard for Frontend Developer Role at Emotech.",
+    "projectImage": "emotech-task.png",
+    "projectLink": "https://emotech-frontend-task.netlify.app/",
+    "projectGithub": "https://github.com/RitinDev/emotech-frontend-task",
+    "projectTechStack": [
+      "React",
+      "Ant Design"
+    ],
+    "deployed": true,
+    "projectSubcategory": "Web Development"
+  },
+  {
+    "projectName": "NYU T-Shirt Store",
+    "projectContributors": "Individual",
+    "projectDescription": "UX design for an online store selling NYU-themed t-shirts.",
+    "projectImage": "nyu-tshirt-app-ux-design.png",
+    "projectLink": "https://www.figma.com/proto/uciu2pshVvHxfncf8PRd0B/Ritin--nux-design-tshirt-app-login?type=design&node-id=179-1169&t=O7GAyl6vVDoneefJ-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=179%3A1169&mode=design",
+    "projectFigma": "https://www.figma.com/file/uciu2pshVvHxfncf8PRd0B/Ritin--nux-design-tshirt-app-login?type=design&node-id=0%3A1&mode=design&t=1SRzUdtralAv4OpX-1",
+    "projectTechStack": [
+      "Figma"
+    ],
+    "deployed": true,
+    "projectSubcategory": "UI/UX Design"
+  },
+  {
+    "projectName": "UNIX Lab Information Portal",
+    "projectContributors": "Individual",
+    "projectDescription": "UX design for a website to help students easily access the UNIX Lab and its services",
+    "projectImage": "unix-lab-ux-design.png",
+    "projectLink": "https://www.figma.com/proto/nC0o5P3y7iJa073wtN2gQ8/Website-Design?type=design&node-id=2-687&t=IfjisDIoOFgoPLxR-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A687&mode=design",
+    "projectFigma": "https://www.figma.com/file/nC0o5P3y7iJa073wtN2gQ8/Website-Design?type=design&node-id=0%3A1&mode=design&t=XyH5bxJPMtWBZx7d-1",
+    "projectTechStack": [
+      "Figma"
+    ],
+    "deployed": true,
+    "projectSubcategory": "UI/UX Design"
+  }
+]

@@ -1,5 +1,14 @@
 .heading {
-  margin: auto auto 0.75em auto;
+  margin: auto;
+}
+
+.subheading {
+  margin: 1.25em auto 1em auto;
+  font-weight: 400;
+}
+
+.subheading.two {
+  margin-top: 1.5em;
 }
 
 .projects__container {
