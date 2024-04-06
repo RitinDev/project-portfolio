@@ -3,15 +3,18 @@ import ProjectCard from '../../components/project-card/ProjectCard'
 import projectsData from './projects.json'
 
 // Import images
-import odinEtchASketch from '../../assets/images/odin-etch-a-sketch.png'
-import busyAgile from '../../assets/images/busy-agile.png'
-import toDoTogether from '../../assets/images/to-do-together.png'
-import dataMisinformation from '../../assets/images/data-misinformation.png'
-import projectPortfolio from '../../assets/images/project-portfolio.png'
-import cryptoExpert from '../../assets/images/crypto-expert.png'
-import emotechTask from '../../assets/images/emotech-task.png'
-import nyuTShirtApp from '../../assets/images/nyu-tshirt-app-ux-design.png'
-import unixLabUXDesign from '../../assets/images/unix-lab-ux-design.png'
+import odinEtchASketch from '../../assets/images/optimized/odin-etch-a-sketch.png'
+import busyAgile from '../../assets/images/optimized/busy-agile.png'
+import toDoTogether from '../../assets/images/optimized/to-do-together.png'
+import dataMisinformation from '../../assets/images/optimized/data-misinformation.png'
+import projectPortfolio from '../../assets/images/optimized/project-portfolio.png'
+import cryptoExpert from '../../assets/images/optimized/crypto-expert.png'
+import emotechTask from '../../assets/images/optimized/emotech-task.png'
+import nyuTShirtApp from '../../assets/images/optimized/nyu-tshirt-app-ux-design.png'
+import unixLabUXDesign from '../../assets/images/optimized/unix-lab-ux-design.png'
+import CITIESDashboard from '../../assets/images/optimized/cities-dashboard.png'
+import CITIESDatasetDownload from '../../assets/images/optimized/cities-dataset-download.png'
+import CITIESAir from '../../assets/images/optimized/cities-air.png'
 
 // Map image names to project images
 type imageMap = Record<string, string>
@@ -25,10 +28,14 @@ const images: imageMap = {
     'emotech-task.png': emotechTask,
     'nyu-tshirt-app-ux-design.png': nyuTShirtApp,
     'unix-lab-ux-design.png': unixLabUXDesign,
+    'cities-dashboard.png': CITIESDashboard,
+    'cities-dataset-download.png': CITIESDatasetDownload,
+    'cities-air.png': CITIESAir,
 }
 
 const Projects = () => {
     // Filter projects by subcategory
+    const citiesProjects = projectsData.filter(project => project.projectSubcategory === 'CITIES')
     const webDevelopmentProjects = projectsData.filter(project => project.projectSubcategory === 'Web Development')
     const uiUxDesignProjects = projectsData.filter(project => project.projectSubcategory === 'UI/UX Design')
 
@@ -36,8 +43,27 @@ const Projects = () => {
         <div className="projects">
             <h1 className="heading">Projects</h1>
 
+            {/* CITIES Projects */}
+            <h2 className="subheading one">React.js Developer at CITIES Center for Interacting Urban Networks</h2>
+            <div className="projects__container">
+                {citiesProjects.map((project, index) => (
+                    <ProjectCard
+                        key={index}
+                        projectName={project.projectName}
+                        projectContributors={project.projectContributors as 'Individual' | 'Team'}
+                        projectDescription={project.projectDescription}
+                        projectImage={images[project.projectImage]}
+                        projectLink={project.projectLink}
+                        projectGithub={project.projectGithub}
+                        projectFigma={project.projectFigma}
+                        projectTechStack={project.projectTechStack}
+                        deployed={project.deployed}
+                    />
+                ))}
+            </div>
+
             {/* Web Development Projects */}
-            <h2 className="subheading one">Web Development</h2>
+            <h2 className="subheading two">Web Development</h2>
             <div className="projects__container">
                 {webDevelopmentProjects.map((project, index) => (
                     <ProjectCard

@@ -127,7 +127,7 @@
   {
     "projectName": "UNIX Lab Information Portal",
     "projectContributors": "Individual",
-    "projectDescription": "UX design for a website to help students easily access the UNIX Lab and its services",
+    "projectDescription": "UX design for a website to help students easily access the UNIX Lab and its services.",
     "projectImage": "unix-lab-ux-design.png",
     "projectLink": "https://www.figma.com/proto/nC0o5P3y7iJa073wtN2gQ8/Website-Design?type=design&node-id=2-687&t=IfjisDIoOFgoPLxR-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A687&mode=design",
     "projectFigma": "https://www.figma.com/file/nC0o5P3y7iJa073wtN2gQ8/Website-Design?type=design&node-id=0%3A1&mode=design&t=XyH5bxJPMtWBZx7d-1",
@@ -136,5 +136,51 @@
     ],
     "deployed": true,
     "projectSubcategory": "UI/UX Design"
+  },
+  {
+    "projectName": "CITIES Dashboard",
+    "projectContributors": "Professional",
+    "projectDescription": "Data visualization dashboard on various aspects of living at NYU Abu Dhabi.",
+    "projectImage": "cities-dashboard.png",
+    "projectLink": "https://citiesdashboard.com/",
+    "projectGithub": "https://github.com/CITIES-Dashboard/cities-dashboard.github.io",
+    "projectTechStack": [
+      "React",
+      "Google Charts",
+      "Nivo",
+      "Material UI",
+      "Node.js"
+    ],
+    "deployed": true,
+    "projectSubcategory": "CITIES"
+  },
+  {
+    "projectName": "Dataset Versioning System",
+    "projectContributors": "Professional",
+    "projectDescription": "Automated versioning and metadata management of public datasets, enhancing accessibility for researchers.",
+    "projectImage": "cities-dataset-download.png",
+    "projectLink": "https://citiesdashboard.com/project/food-waste",
+    "projectGithub": "https://github.com/CITIES-Dashboard/datasets",
+    "projectTechStack": [
+      "Node.js",
+      "YAML"
+    ],
+    "deployed": true,
+    "projectSubcategory": "CITIES"
+  },
+  {
+    "projectName": "CITIESair",
+    "projectContributors": "Professional",
+    "projectDescription": "A dashboard to provide real-time indoor and outdoor air quality data to schools in Abu Dhabi.",
+    "projectImage": "cities-air.png",
+    "projectLink": "https://citiesair.com/",
+    "projectGithub": "https://github.com/cities-air/citiesair.com/",
+    "projectTechStack": [
+      "React",
+      "Google Charts",
+      "Node.js"
+    ],
+    "deployed": true,
+    "projectSubcategory": "CITIES"
   }
 ]

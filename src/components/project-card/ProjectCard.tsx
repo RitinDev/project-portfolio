@@ -16,7 +16,7 @@ type ProjectCardProps = {
     projectTechStack: string[] | undefined;
     deployed: boolean;
 };
-type ContributorTypes = 'Individual' | 'Team';
+type ContributorTypes = 'Individual' | 'Team' | 'Professional';
 
 const ProjectCard = (props: ProjectCardProps) => {
     const [shareButtonClicked, setShareButtonClicked] = useState(false);
