@@ -4,7 +4,7 @@ const HomeIntro = () => {
     return (
         <div className="home-intro">
             <h2 className='greeting'>Hello there!</h2>
-            <p> I'm Ritin, a Computer Science Major at New York University interested in full-stack web development and working with data. I'm passionate about creating intuitive and user-friendly web applications and meaningful data products. I'm looking for opportunities to apply my knowledge of software engineering, database design and data analysis in a professional environment. Feel free to reach out to me via any links provided in the <a href={`${import.meta.env.BASE_URL}contact`}>Contact</a> Page.</p>
+            <p> I'm Ritin, a Data Analyst at Norse Atlantic Airways and a Computer Science graduate from NYU. I work on optimizing flight revenue through data analysis, automation, and pricing strategy — building tools that directly impact business performance.<br /><br />I also have experience in software development and UI/UX design, which helps me build solutions that are effective, easy to use and scalable. Feel free to get in touch via the <a href={`${import.meta.env.BASE_URL}contact`}>Contact</a> page. </p>
         </div>
     )
 }
