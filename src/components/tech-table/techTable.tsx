@@ -3,253 +3,82 @@ import { useEffect } from 'react'
 
 import viteLogo from '../../assets/vite.svg'
 import antDesignLogo from '../../assets/ant-design-logo.svg'
+import navitaireLogo from '../../assets/navitaire.svg'
+
+const techItems = [
+    { label: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+    { label: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg' },
+    { label: 'Azure', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg' },
+    { label: 'Azure DevOps', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/azuredevops/azuredevops-original.svg' },
+    { label: 'Apache Spark', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachespark/apachespark-original.svg' },
+    { label: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+    { label: 'Navitaire Suite', icon: navitaireLogo, customWidth: '96', customHeight: '48' },
+    { label: 'R', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg' },
+    { label: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+    { label: 'HTML5', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg' },
+    { label: 'CSS3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg' },
+    { label: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg' },
+    { label: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg' },
+    { label: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+    { label: 'Vite', icon: viteLogo },
+    { label: 'Bootstrap', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' },
+    { label: 'Material UI', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg' },
+    { label: 'Ant Design', icon: antDesignLogo },
+    { label: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg' },
+    { label: 'Express', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
+    { label: 'Jest', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg' },
+    { label: 'Mocha', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg' },
+    { label: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
+    { label: 'C / C++', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
+    { label: 'Rust', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg' },
+]
 
 const TechTable = () => {
-    // Apply levitating animation to all images within the tech table
     useEffect(() => {
-        const images = Array.from(document.querySelectorAll<HTMLImageElement>('.tech-table img'));
+        const images = Array.from(document.querySelectorAll<HTMLImageElement>('.tech-grid img'))
 
         const handleMouseEnter = (event: MouseEvent) => {
-            const target = event.target as HTMLImageElement;
-            target.classList.add('hover-animate');
-        };
+            const target = event.target as HTMLImageElement
+            target.classList.add('hover-animate')
+        }
 
         const handleMouseLeave = (event: MouseEvent) => {
-            const target = event.target as HTMLImageElement;
-            target.addEventListener('animationiteration', () => {
-                target.classList.remove('hover-animate');
-            }, { once: true });
-        };
+            const target = event.target as HTMLImageElement
+            target.addEventListener(
+                'animationiteration',
+                () => target.classList.remove('hover-animate'),
+                { once: true }
+            )
+        }
 
-        // Attach event listeners
         images.forEach(img => {
-            img.addEventListener('mouseenter', handleMouseEnter);
-            img.addEventListener('mouseleave', handleMouseLeave);
-        });
+            img.addEventListener('mouseenter', handleMouseEnter)
+            img.addEventListener('mouseleave', handleMouseLeave)
+        })
 
-        // Cleanup function to remove event listeners
         return () => {
             images.forEach(img => {
-                img.removeEventListener('mouseenter', handleMouseEnter);
-                img.removeEventListener('mouseleave', handleMouseLeave);
-            });
-        };
-    }, []);
+                img.removeEventListener('mouseenter', handleMouseEnter)
+                img.removeEventListener('mouseleave', handleMouseLeave)
+            })
+        }
+    }, [])
 
     return (
-        <div className="tech-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th scope="col"></th>
-                        <th scope="col"></th>
-                        <th scope="col"></th>
-                        <th scope="col"></th>
-                        <th scope="col"></th>
-                        <th scope="col"></th>
-                        <th scope="col"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
-                                width="48"
-                                height="48"
-                                alt="HTML"
-                            />
-                            <br /><strong>HTML5</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
-                                width="48"
-                                height="48"
-                                alt="CSS3"
-                            />
-                            <br /><strong>CSS3</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
-                                width="48"
-                                height="48"
-                                alt="JavaScript"
-                            />
-                            <br /><strong>JavaScript</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg"
-                                width="48"
-                                height="48"
-                                alt="TypeScript"
-                            />
-                            <br /><strong>TypeScript</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                                width="48"
-                                height="48"
-                                alt="React"
-                            />
-                            <br /><strong>React</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
-                                width="48"
-                                height="48"
-                                alt="Material UI"
-                            />
-                            <br /><strong>Material UI</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                                width="48"
-                                height="48"
-                                alt="Bootstrap"
-                            />
-                            <br /><strong>Bootstrap</strong>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src={antDesignLogo}
-                                width="48"
-                                height="48"
-                                alt="Ant Design"
-                            />
-                            <br /><strong>Ant Design</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg"
-                                width="48"
-                                height="48"
-                                alt="Node.js"
-                            />
-                            <br /><strong>Node.js</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                className='express-logo switch-colors'
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
-                                width="48"
-                                height="48"
-                                alt="Express"
-                            />
-                            <br /><strong>Express</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                                width="48"
-                                height="48"
-                                alt="MongoDB"
-                            />
-                            <br /><strong>MongoDB</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                                width="48"
-                                height="48"
-                                alt="MySQL"
-                            />
-                            <br /><strong>MySQL</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                                width="48"
-                                height="48"
-                                alt="Python"
-                            />
-                            <br /><strong>Python</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
-                                width="48"
-                                height="48"
-                                alt="R"
-                            />
-                            <br /><strong>R</strong>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                                width="48"
-                                height="48"
-                                alt="Git"
-                            />
-                            <br /><strong>Git</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src={viteLogo}
-                                width="48"
-                                height="48"
-                                alt="Vite"
-                            />
-                            <br /><strong>Vite</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
-                                width="48"
-                                height="48"
-                                alt="Jest"
-                            />
-                            <br /><strong>Jest</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg"
-                                width="48"
-                                height="48"
-                                alt="Mocha"
-                            />
-                            <br /><strong>Mocha</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-                                width="48"
-                                height="48"
-                                alt="C++"
-                            />
-                            <br /><strong>C / C++</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                                width="48"
-                                height="48"
-                                alt="Java"
-                            />
-                            <br /><strong>Java</strong>
-                        </td>
-                        <td align="center" height="108" width="108">
-                            <img
-                                className='rust-logo switch-colors'
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
-                                width="48"
-                                height="48"
-                                alt="Rust"
-                            />
-                            <br /><strong>Rust</strong>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div className='tech-grid'>
+            {techItems.map(({ icon, label, customWidth, customHeight }) => (
+                <div key={label} className='tech-item'>
+                    <img
+                        src={icon}
+                        alt={label}
+                        width={customWidth ?? '48'}
+                        height={customHeight ?? '48'}
+                        className={label === 'Express' || label === 'Rust' ? 'switch-colors' : ''}
+                        style={{ "objectFit": 'contain' }}
+                    />
+                    <br /><strong>{label}</strong>
+                </div>
+            ))}
         </div>
     )
 }
