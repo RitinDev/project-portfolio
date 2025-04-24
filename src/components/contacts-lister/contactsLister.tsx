@@ -40,9 +40,9 @@ const ContactsGrid = () => {
             }>
                 <img src={emailContact} alt="email" />
                 <MailOutlined style={logoStyle} className='contact-logo' />
-                <p style={userNameStyle}>rm5486@nyu.edu</p>
+                <p style={userNameStyle}>ritin.malhotra@nyu.edu</p>
             </div>
-            <h3 className='secondary-contacts-heading'>Also, feel free to visit:</h3>
+            <h3 className='secondary-contacts-heading'>You can also find me here:</h3>
             <div className="secondary-contacts">
                 <div className="contacts-lister-item github" onClick={() => {
                     window.open(socialMediaLinks.github, '_blank')
