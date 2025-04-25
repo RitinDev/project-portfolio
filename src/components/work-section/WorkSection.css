@@ -1,0 +1,12 @@
+.skills-row {
+    margin-top: 0.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+@media (max-width: 767px) {
+    .skills-row {
+        display: none;
+    }
+}

@@ -44,7 +44,7 @@ const Projects = () => {
             <h1 className="heading">Projects</h1>
 
             {/* CITIES Projects */}
-            <h2 className="subheading one">React.js Developer at CITIES Center for Interacting Urban Networks</h2>
+            <h2 className="subheading one">Software Developer at CITIES Center for Interacting Urban Networks</h2>
             <div className="projects__container">
                 {citiesProjects.map((project, index) => (
                     <ProjectCard

@@ -1,5 +1,6 @@
 import './techTable.css'
 import { useEffect } from 'react'
+import React from 'react'
 
 import viteLogo from '../../assets/vite.svg'
 import antDesignLogo from '../../assets/ant-design-logo.svg'
@@ -83,4 +84,4 @@ const TechTable = () => {
     )
 }
 
-export default TechTable
+export default React.memo(TechTable)
