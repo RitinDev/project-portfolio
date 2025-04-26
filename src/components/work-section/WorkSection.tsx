@@ -8,7 +8,17 @@ import citiesLogo from '../../assets/images/work-ex/cities-logo.png';
 import nyuadLogo from '../../assets/images/work-ex/nyuad-logo.png';
 import amaxaLogo from '../../assets/images/work-ex/amaxa-logo.png';
 
-const workHistory = [
+type WorkItem = {
+    title: string;
+    company: string;
+    duration: string;
+    location: string;
+    employmentType: string;
+    logo: string; // because you're importing them as paths
+    skills: string[];
+};
+
+const workHistory: WorkItem[] = [
     {
         title: 'Junior Data Analyst',
         company: 'Norse Atlantic Airways',
@@ -47,6 +57,40 @@ const workHistory = [
     },
 ];
 
+const ArrowButton = ({ direction, onClick }: { direction: 'left' | 'right'; onClick: () => void }) => (
+    <Col
+        flex="24px"
+        style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+        }}
+    >
+        <span
+            style={{
+                cursor: 'pointer',
+                fontSize: '1.4rem',
+                fontWeight: 500,
+                padding: '0.25rem 0.5rem',
+                color: '#666',
+                userSelect: 'none',
+                transition: 'all 0.2s ease',
+            }}
+            onClick={onClick}
+            onMouseEnter={(e) => {
+                e.currentTarget.style.opacity = '0.6';
+                e.currentTarget.style.transform = 'scale(1.1)';
+            }}
+            onMouseLeave={(e) => {
+                e.currentTarget.style.opacity = '1';
+                e.currentTarget.style.transform = 'scale(1)';
+            }}
+        >
+            {direction === 'left' ? '‹' : '›'}
+        </span>
+    </Col>
+);
+
 const WorkSection = () => {
     const [index, setIndex] = useState(0);
     const job = workHistory[index];
@@ -61,14 +105,7 @@ const WorkSection = () => {
             {/* Arrows + Card layout */}
             <Row align="middle" style={{ height: '140px', marginTop: '0.5rem', flexWrap: 'nowrap' }}>
                 {/* Left arrow */}
-                <Col flex="24px" style={{ textAlign: 'center' }}>
-                    <span
-                        style={{ cursor: 'pointer', fontSize: '1.25rem', userSelect: 'none' }}
-                        onClick={prev}
-                    >
-                        &lt;
-                    </span>
-                </Col>
+                <ArrowButton direction="left" onClick={prev} />
 
                 {/* Card */}
                 <Col flex="auto">
@@ -154,14 +191,7 @@ const WorkSection = () => {
                 </Col>
 
                 {/* Right arrow */}
-                <Col flex="24px" style={{ textAlign: 'center' }}>
-                    <span
-                        style={{ cursor: 'pointer', fontSize: '1.25rem', userSelect: 'none' }}
-                        onClick={next}
-                    >
-                        &gt;
-                    </span>
-                </Col>
+                <ArrowButton direction="right" onClick={next} />
             </Row>
         </section>
     );
