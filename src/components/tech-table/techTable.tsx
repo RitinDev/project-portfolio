@@ -1,4 +1,5 @@
 import './techTable.css'
+
 import { useEffect } from 'react'
 import React from 'react'
 
@@ -75,7 +76,7 @@ const TechTable = () => {
                         width={customWidth ?? '48'}
                         height={customHeight ?? '48'}
                         className={label === 'Express' || label === 'Rust' ? 'switch-colors' : ''}
-                        style={{ "objectFit": 'contain' }}
+                        style={{ 'objectFit': 'contain' }}
                     />
                     <br /><strong>{label}</strong>
                 </div>

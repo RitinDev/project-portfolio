@@ -14,7 +14,7 @@ type WorkItem = {
     duration: string;
     location: string;
     employmentType: string;
-    logo: string; // because you're importing them as paths
+    logo: string;
     skills: string[];
 };
 
@@ -100,14 +100,9 @@ const WorkSection = () => {
 
     return (
         <section id="work" style={{ padding: '0 0 1.5rem 0', maxWidth: 600, margin: '0 auto' }}>
-            <h2 style={{ fontWeight: 600 }}>✈️ Work</h2>
-
-            {/* Arrows + Card layout */}
             <Row align="middle" style={{ height: '140px', marginTop: '0.5rem', flexWrap: 'nowrap' }}>
-                {/* Left arrow */}
                 <ArrowButton direction="left" onClick={prev} />
 
-                {/* Card */}
                 <Col flex="auto">
                     <Card
                         key={job.title}
@@ -129,7 +124,6 @@ const WorkSection = () => {
                                 alignItems: 'stretch',
                             }}
                         >
-                            {/* Logo */}
                             <Col
                                 style={{
                                     flex: '0 0 25%',
@@ -156,7 +150,6 @@ const WorkSection = () => {
                                 </div>
                             </Col>
 
-                            {/* Content */}
                             <Col
                                 style={{
                                     flex: '1',
@@ -167,7 +160,6 @@ const WorkSection = () => {
                                     textAlign: 'left',
                                 }}
                             >
-                                {/* Top text */}
                                 <div className="text-block">
                                     <h3 style={{ margin: 0, fontSize: '1rem', lineHeight: '1.2' }}>{job.title}</h3>
                                     <p style={{ margin: '0.2rem 0 0 0', fontSize: '0.85rem' }}>{job.company}</p>
@@ -176,7 +168,6 @@ const WorkSection = () => {
                                     </p>
                                 </div>
 
-                                {/* Bottom: Skills row */}
                                 <div className="skills-row">
                                     {job.skills.map((skill, idx) => (
                                         <span key={skill} style={{ fontSize: '0.75rem', color: '#888' }}>
@@ -190,7 +181,6 @@ const WorkSection = () => {
                     </Card>
                 </Col>
 
-                {/* Right arrow */}
                 <ArrowButton direction="right" onClick={next} />
             </Row>
         </section>

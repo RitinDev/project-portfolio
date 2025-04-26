@@ -3,16 +3,16 @@
     will-change: transform;
 }
 
-.tools-tech {
+h2 {
     animation: slow-fade 1s ease-in-out;
 }
 
-.tools-emoji {
+.emoji {
     display: inline-block;
     cursor: default;
 }
 
-.tools-emoji:hover {
+.tools:hover {
     animation: flip 1s;
     animation-fill-mode: forwards;
 }
