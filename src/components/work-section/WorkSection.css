@@ -5,6 +5,26 @@
     gap: 0.25rem;
 }
 
+#work {
+    animation: slow-fade 0.5s ease-in-out;
+}
+
+.text-block,
+.skills-row {
+    opacity: 0;
+    transform: translateX(-50px);
+    /* Slide in from the left */
+    animation: slideInLeft 0.2s ease-out forwards;
+}
+
+/* Keyframes for sliding in from the left */
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 @media (max-width: 767px) {
     .skills-row {
         display: none;

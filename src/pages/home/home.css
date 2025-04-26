@@ -4,7 +4,7 @@
 }
 
 h2 {
-    animation: slow-fade 1s ease-in-out;
+    animation: slow-fade 0.75s ease-in-out;
 }
 
 .emoji {
@@ -22,7 +22,6 @@ h2 {
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* Hover animation */
 .airplane:hover {
     transform: translate(75px, -50px) rotate(30deg) scale(0.7);
     opacity: 0;
