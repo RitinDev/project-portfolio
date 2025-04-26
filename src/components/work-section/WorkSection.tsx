@@ -122,6 +122,7 @@ const WorkSection = () => {
                                 height: '100%',
                                 flexWrap: 'nowrap',
                                 alignItems: 'stretch',
+                                boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
                             }}
                         >
                             <Col
