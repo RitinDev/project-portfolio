@@ -16,3 +16,14 @@ h2 {
     animation: flip 1s;
     animation-fill-mode: forwards;
 }
+
+.airplane {
+    display: inline-block;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Hover animation */
+.airplane:hover {
+    transform: translate(75px, -50px) rotate(30deg) scale(0.7);
+    opacity: 0;
+}
