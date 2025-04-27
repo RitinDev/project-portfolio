@@ -15,6 +15,7 @@ import unixLabUXDesign from '../../assets/images/optimized/unix-lab-ux-design.pn
 import CITIESDashboard from '../../assets/images/optimized/cities-dashboard.png'
 import CITIESDatasetDownload from '../../assets/images/optimized/cities-dataset-download.png'
 import CITIESAir from '../../assets/images/optimized/cities-air.png'
+import scratch from '../../assets/images/optimized/scratch.png'
 
 // Map image names to project images
 type imageMap = Record<string, string>
@@ -31,6 +32,7 @@ const images: imageMap = {
     'cities-dashboard.png': CITIESDashboard,
     'cities-dataset-download.png': CITIESDatasetDownload,
     'cities-air.png': CITIESAir,
+    'scratch.png': scratch
 }
 
 const Projects = () => {

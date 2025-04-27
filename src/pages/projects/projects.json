@@ -182,5 +182,19 @@
     ],
     "deployed": true,
     "projectSubcategory": "CITIES"
+  },
+  {
+    "projectName": "Scratch",
+    "projectContributors": "Individual",
+    "projectDescription": "A virtual scratch card generator.",
+    "projectImage": "scratch.png",
+    "projectLink": "https://ritindev.github.io/scratch/",
+    "projectGithub": "https://github.com/RitinDev/scratch",
+    "projectTechStack": [
+      "Vue.js",
+      "CSS"
+    ],
+    "deployed": true,
+    "projectSubcategory": "Web Development"
   }
 ]
