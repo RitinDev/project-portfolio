@@ -102,7 +102,6 @@ const WorkSection = () => {
         <section id="work" style={{ padding: '0 0 1.5rem 0', maxWidth: 600, margin: '0 auto' }}>
             <Row align="middle" style={{ height: '140px', marginTop: '0.5rem', flexWrap: 'nowrap' }}>
                 <ArrowButton direction="left" onClick={prev} />
-
                 <Col flex="auto">
                     <Card
                         key={job.title}
@@ -150,7 +149,6 @@ const WorkSection = () => {
                                     />
                                 </div>
                             </Col>
-
                             <Col
                                 style={{
                                     flex: '1',
@@ -181,7 +179,6 @@ const WorkSection = () => {
                         </Row>
                     </Card>
                 </Col>
-
                 <ArrowButton direction="right" onClick={next} />
             </Row>
         </section>

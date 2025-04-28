@@ -12,12 +12,12 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-    title = 'Ritin Malhotra Project Portfolio',
-    description = 'Welcome to the portfolio page of Ritin Malhotra, a Computer Science Major at New York University with a keen interest in full-stack web development and working with data.',
+    title = "Ritin's Project Portfolio",
+    description = 'Welcome to the portfolio page of Ritin Malhotra, Junior Data Analyst and Revenue Manager at Norse Atlantic Airways. CS graduate from NYU intersted in building impactful data products, with experience in software engineering and UI/UX design.',
     url = 'https://ritindev.github.io/project-portfolio/',
     image = 'https://ritindev.github.io/project-portfolio/vite.svg',
     author = 'Ritin Malhotra',
-    keywords = ['Ritin Malhotra', 'project', 'portfolio', 'full-stack web development', 'data', 'NYU', 'Computer Science'],
+    keywords = ['Ritin Malhotra', 'Ritin', 'project', 'portfolio', 'project porftolio', 'full-stack web development', 'data', 'data analyst', 'Norse Atlantic', 'Revenue Management', 'Revenue Manager', 'NYU', 'Computer Science'],
     lang = 'en'
 }) => {
     return (
