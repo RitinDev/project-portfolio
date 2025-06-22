@@ -2,6 +2,7 @@ import './WorkSection.css'
 
 import { Card, Row, Col } from 'antd';
 import { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 
 import norseLogo from '../../assets/images/work-ex/norse-logo.png';
 import citiesLogo from '../../assets/images/work-ex/cities-logo.png';
@@ -98,11 +99,17 @@ const WorkSection = () => {
     const prev = () => setIndex((prev) => (prev === 0 ? workHistory.length - 1 : prev - 1));
     const next = () => setIndex((prev) => (prev === workHistory.length - 1 ? 0 : prev + 1));
 
+    const handlers = useSwipeable({
+        onSwipedLeft: next,
+        onSwipedRight: prev,
+        preventScrollOnSwipe: true
+    });
+
     return (
         <section id="work" style={{ padding: '0 0 1.5rem 0', maxWidth: 600, margin: '0 auto' }}>
             <Row align="middle" style={{ height: '140px', marginTop: '0.5rem', flexWrap: 'nowrap' }}>
                 <ArrowButton direction="left" onClick={prev} />
-                <Col flex="auto">
+                <Col flex="auto" {...handlers}>
                     <Card
                         key={job.title}
                         bordered
