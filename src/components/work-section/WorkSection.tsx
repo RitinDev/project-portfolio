@@ -1,7 +1,7 @@
 import './WorkSection.css';
 
 import { Card, Row, Col } from 'antd';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import { UpOutlined, DownOutlined } from '@ant-design/icons';
 
@@ -58,7 +58,7 @@ const workHistory = [
     },
 ];
 
-const groupByCompany = (items) => {
+const groupByCompany = (items: typeof workHistory) => {
     const map = new Map();
     for (const item of items) {
         if (!map.has(item.company)) map.set(item.company, []);
@@ -69,7 +69,7 @@ const groupByCompany = (items) => {
 
 const groupedWorkHistory = groupByCompany(workHistory);
 
-const ArrowButton = ({ direction, onClick }) => (
+const ArrowButton = ({ direction, onClick }: { direction: 'left' | 'right'; onClick: () => void }) => (
     <Col flex="24px" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <span
             style={{
@@ -118,7 +118,8 @@ const WorkSection = () => {
 
     const handleCompanyChange = (newIndex: number) => {
         setIndex(newIndex);
-        setRoleIndex(0); // reset roleIndex immediately
+        // reset to first role in ladder before switching companies to avoid errors while switching to companies with fewer roles
+        setRoleIndex(0);
     };
 
     const handlers = useSwipeable({
@@ -174,7 +175,7 @@ const WorkSection = () => {
                                         {currentRole.duration} · {currentRole.location} · {currentRole.employmentType}
                                     </p>
                                     <div className="skills-row" style={{ marginTop: '1.25rem' }}>
-                                        {currentRole.skills.map((skill, idx) => (
+                                        {currentRole.skills.map((skill: string, idx: number) => (
                                             <span key={skill} style={{ fontSize: '0.75rem', color: '#888' }}>
                                                 {skill}
                                                 {idx !== currentRole.skills.length - 1 ? ' · ' : ''}
